@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import useAuth from "../../hooks/useAuth";
 import { styles } from "../../Styles/userDataStyles";
 
@@ -27,7 +27,9 @@ const UserData = () => {
         <ItemMenu title="Email" text={auth.email} />
       </View>
 
-      <Button title="Logout" onPress={Logout} style={styles.btnLogoun} />
+      <TouchableOpacity style={styles.button} onPress={Logout}>
+        <Text style={styles.buttonTitle}>Logout</Text>
+      </TouchableOpacity>
     </View>
   );
 }

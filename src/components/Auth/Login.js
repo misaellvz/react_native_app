@@ -3,7 +3,7 @@ import {
   View,
   Text,
   TextInput,
-  Button,
+  TouchableOpacity,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFormik } from 'formik';
@@ -51,7 +51,9 @@ const Login = () => {
         value={formik.values.password}
         onChangeText={(text) => formik.setFieldValue('password', text)}
       />
-      <Button style={styles.button} title="Login" onPress={formik.handleSubmit} />
+      <TouchableOpacity style={styles.button} onPress={formik.handleSubmit}>
+        <Text style={styles.buttonTitle}>Login</Text>
+      </TouchableOpacity>
       <Text style={styles.error}>{formik.errors.username}</Text>
       <Text style={styles.error}>{formik.errors.password}</Text>
       <Text style={styles.error}>{error}</Text>

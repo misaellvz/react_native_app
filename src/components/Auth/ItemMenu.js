@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { Text, View } from 'react-native';
+import { styles } from '../../Styles/ItemMenuStyles';
 
 const ItemMenu = ({ title, text }) => {
   return (
@@ -11,17 +12,3 @@ const ItemMenu = ({ title, text }) => {
 }
 
 export default ItemMenu;
-
-const styles = StyleSheet.create({
-  itemMenu: {
-    flexDirection: "row",
-    paddingVertical: 20,
-    borderBottomWidth: 1,
-    borderColor: "#CFCFCF",
-  },
-  itemMenuTitle: {
-    fontWeight: "bold",
-    paddingRight: 10,
-    width: 120,
-  },
-});

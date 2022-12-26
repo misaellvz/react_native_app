@@ -1,7 +1,7 @@
-import { View, Text, Button, TextInput, Switch } from 'react-native';
-import React from 'react';
-import { styles } from '../../Styles/ProductFilterDialogStyles';
 import Slider from '@react-native-community/slider';
+import React from 'react';
+import { Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { styles } from '../../Styles/ProductFilterDialogStyles';
 
 const ProductFilterDialogView = ({ formik }) => {
   return (
@@ -73,7 +73,9 @@ const ProductFilterDialogView = ({ formik }) => {
         maximumValue={1000}
         onValueChange={(value) => formik.setFieldValue('maxPrice', value)}
         />
-      <Button title="Search" onPress={formik.handleSubmit} />
+      <TouchableOpacity style={styles.button} onPress={formik.handleSubmit}>
+        <Text style={styles.buttonTitle}>Search</Text>
+      </TouchableOpacity>
     </View>
   );
 }

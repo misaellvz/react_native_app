@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Text, TouchableOpacity, View } from 'react-native';
-import ProductsList from '../components/Product/ProductsList';
+import { Text, TouchableOpacity, View } from 'react-native';
 import Error from '../components/Error';
 import ProductFilterDialog from '../components/Product/ProductFilterDialog';
+import ProductsList from '../components/Product/ProductsList';
 import Spinner from '../components/Spinner';
 import useProductsFilterListState from '../hooks/products-filter-list';
-import { styles } from '../Styles/ButtonStyles';
+import { styles } from '../Styles/HomeStyles';
 
 const Home = () => {
   const [ open, setOpen ] = useState(false);

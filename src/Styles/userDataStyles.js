@@ -14,7 +14,23 @@ export const styles = StyleSheet.create({
   dataContent: {
     marginBottom: 20,
   },
-  btnLogoun: {
-    paddingTop: 20,
+  button: {
+    backgroundColor: '#198df1',
+    textAlign: 'center',
+    color: '#fff',
+    margin: 10,
+    paddingTop: 5,
+    height: 40,
+    width: '95%',
+    alignSelf: 'center',
+    borderRadius: 10,
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  buttonTitle: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold'
   },
 });

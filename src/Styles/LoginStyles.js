@@ -18,5 +18,24 @@ export const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
   },
+  button: {
+    backgroundColor: '#198df1',
+    textAlign: 'center',
+    color: '#fff',
+    margin: 10,
+    paddingTop: 5,
+    height: 40,
+    width: '95%',
+    alignSelf: 'center',
+    borderRadius: 10,
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  buttonTitle: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 22,
+    fontWeight: 'bold'
+  },
   error: { textAlign: 'center', color: '#f00', marginTop: 20 },
 });
