@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View } from 'react-native';
+import Login from '../components/Auth/Login';
+import UserData from '../components/Auth/UserData';
+import useAuth from "../hooks/useAuth";
 
 const Account = () => {
+  const { auth } = useAuth();
   return (
     <View>
-      <Text>Account</Text>
+      {auth ? <UserData /> : <Login/>}
     </View>
   )
 }
 
 export default Account;
-
-const styles = StyleSheet.create({})
