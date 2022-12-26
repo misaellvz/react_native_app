@@ -4,8 +4,6 @@ import { styles } from '../Styles/ProductDetailsStyles';
 
 const ProductDetails = ({ route: { params: { params } } }) => {
   const item = JSON.parse(params);
-  console.log('item: ', item);
-  console.log('item.title: ', item.title);
   return (
     <View style={styles.card}>
       <Text style={styles.title}>{item.title}</Text>
@@ -25,4 +23,4 @@ const ProductDetails = ({ route: { params: { params } } }) => {
   )
 }
 
-export default ProductDetails
+export default ProductDetails;

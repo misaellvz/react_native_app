@@ -13,9 +13,7 @@ const Home = () => {
   const { loading, data, error } = useProductsFilterListState(filter);
 
   function handleClose(dialogCloseEvent) {
-    console.log('Entra acá?', open);
     setOpen(false);
-    console.log('Entra y acá?', open);
     setFilter(dialogCloseEvent);
   }
   return (

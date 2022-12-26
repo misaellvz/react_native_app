@@ -12,10 +12,7 @@ const ProductFilterDialog = ({ open, onClose }) => {
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: false,
-    onSubmit: (values) => {
-      console.log('values', values);
-      onClose(values)
-    },
+    onSubmit: (values) => onClose(values),
   });
 
     return (

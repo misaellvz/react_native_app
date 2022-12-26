@@ -1,24 +1,24 @@
-import { View, Text, Button, TextInput, Switch, SliderBase } from 'react-native';
+import { View, Text, Button, TextInput, Switch } from 'react-native';
 import React from 'react';
 import { styles } from '../../Styles/ProductFilterDialogStyles';
 import Slider from '@react-native-community/slider';
 
 const ProductFilterDialogView = ({ formik }) => {
   return (
-    <View>
-      <Text>Filter by: </Text>
-      <Text>Name</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Filter by: </Text>
+      <Text style={styles.text}>Name:</Text>
       <TextInput
         placeholder="Type the product name"
-        // style={styles.input}
+        style={styles.textInput}
         autoCapitalize="none"
         value={formik.values.title}
         onChangeText={formik.handleChange('title')}
         onBlur={formik.handleBlur('title')}
       />
-      <Text>Category</Text>
+      <Text style={styles.text}>Category:</Text>
       <View style={styles.switcherContainer}>
-        <Text>Men's clothing</Text>
+        <Text style={styles.text}>Men's clothing</Text>
         <Switch
           trackColor={{ false: "#767577", true: "#19f157" }}
           thumbColor={formik.values.menClothes ? "#fff" : "#f4f3f4"}
@@ -27,8 +27,8 @@ const ProductFilterDialogView = ({ formik }) => {
           value={formik.values.menClothes}
         />
       </View>
-      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Women's clothing</Text>
+      <View style={styles.switcherContainer}>
+        <Text style={styles.text}>Women's clothing</Text>
         <Switch
           trackColor={{ false: "#767577", true: "#19f157" }}
           thumbColor={formik.values.womenClothes ? "#fff" : "#f4f3f4"}
@@ -37,8 +37,8 @@ const ProductFilterDialogView = ({ formik }) => {
           value={formik.values.womenClothes}
         />
       </View>
-      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Electronics</Text>
+      <View style={styles.switcherContainer}>
+        <Text style={styles.text}>Electronics</Text>
         <Switch
           trackColor={{ false: "#767577", true: "#19f157" }}
           thumbColor={formik.values.electronics ? "#fff" : "#f4f3f4"}
@@ -47,8 +47,8 @@ const ProductFilterDialogView = ({ formik }) => {
           value={formik.values.electronics}
         />
       </View>
-      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Jewelery</Text>
+      <View style={styles.switcherContainer}>
+        <Text style={styles.text}>Jewelery</Text>
         <Switch
           trackColor={{ false: "#767577", true: "#19f157" }}
           thumbColor={formik.values.jewelery ? "#fff" : "#f4f3f4"}
@@ -57,17 +57,17 @@ const ProductFilterDialogView = ({ formik }) => {
           value={formik.values.jewelery}
         />
       </View>
-      <Text>Minimum price</Text>
+      <Text style={styles.text}>Minimum price:</Text>
       <Slider
-        // style={styles.input}
+        style={styles.slider}
         autoCapitalize="none"
         minimumValue={0}
         maximumValue={1000}
         onValueChange={(value) => formik.setFieldValue('minPrice', value)}
         />
-      <Text>Maximum price</Text>
+      <Text style={styles.text}>Maximum price:</Text>
       <Slider
-        // style={styles.input}
+        style={styles.slider}
         autoCapitalize="none"
         minimumValue={0}
         maximumValue={1000}
