@@ -57,7 +57,7 @@ const ProductFilterDialogView = ({ formik }) => {
           value={formik.values.jewelery}
         />
       </View>
-      <Text style={styles.text}>Minimum price:</Text>
+      <Text style={styles.text}>Minimum price: ${formik.values.minPrice}</Text>
       <Slider
         style={styles.slider}
         autoCapitalize="none"
@@ -65,7 +65,7 @@ const ProductFilterDialogView = ({ formik }) => {
         maximumValue={1000}
         onValueChange={(value) => formik.setFieldValue('minPrice', value)}
         />
-      <Text style={styles.text}>Maximum price:</Text>
+      <Text style={styles.text}>Maximum price: ${formik.values.maxPrice}</Text>
       <Slider
         style={styles.slider}
         autoCapitalize="none"

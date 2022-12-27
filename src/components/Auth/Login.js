@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFormik } from 'formik';
+import React, { useState } from 'react';
+import {
+  Text,
+  TextInput,
+  TouchableOpacity, View
+} from 'react-native';
 import * as Yup from 'yup';
-import initialValues from '../../utils/initialValues';
-import validationSchema from '../../utils/validationSchema';
-import { user, userDetails } from '../../utils/userDB';
 import useAuth from '../../hooks/useAuth';
 import { styles } from '../../Styles/LoginStyles';
+import initialValues from '../../utils/initialValues';
+import { user, userDetails } from '../../utils/userDB';
+import validationSchema from '../../utils/validationSchema';
 
 const Login = () => {
   const navigation = useNavigation();
@@ -28,7 +27,7 @@ const Login = () => {
         setError('Username or password incorrect');
       } else {
         login(userDetails);
-        navigation.navigate('Home');
+        navigation.replace('Home');
         formik.setValues(initialValues());
       }
     },
@@ -59,6 +58,5 @@ const Login = () => {
       <Text style={styles.error}>{error}</Text>
     </View>
   );
-}
+};
 export default Login;
-

@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 import React from 'react';
 import { styles } from '../Styles/ProductDetailsStyles';
 
@@ -14,7 +14,9 @@ const ProductDetails = ({ route: { params: { params } } }) => {
         }}
       />
       <Text style={styles.category}>{item.category}</Text>
-      <Text style={styles.description}>{item.description}</Text>
+      <ScrollView tyle={styles.description}>
+        <Text style={styles.description}>{item.description}</Text>
+      </ScrollView>
       <View style={styles.priceContainer}>
         <Text style={styles.price}>${item.price}</Text>
         <Text style={styles.rate}>&#9733; {item.rating.rate}</Text>

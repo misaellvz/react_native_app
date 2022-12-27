@@ -10,7 +10,7 @@ const ProductNavigator = () => {
       <Stack.Screen
         name="ProductList"
         component={Home}
-        options={{ title: "", headerTransparent: true }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="ProductDetails"
