@@ -15,16 +15,16 @@ export default function useProductsFilterListState({ title, menClothes, womenClo
       if(title || menClothes || womenClothes || electronics || jewelery || minPrice || maxPrice){
         filteredData = data.filter((item) => {
           return (
-            (title && item.title.startsWith(title)) ||
+            (title && item.title.startsWith(title) || true) &&
             (
-                (menClothes && item.category === "men's clothing") ||
-                (womenClothes && item.category === "women's clothing") ||
+                (menClothes && item.category === 'men_clothes') ||
+                (womenClothes && item.category === 'women_clothes') ||
                 (electronics && item.category === 'electronics') ||
-                (jewelery && item.category === 'jewelery')
-            ) ||
-            (minPrice && item.price >= minPrice) ||
-            (maxPrice && item.price <= maxPrice)
-          )
+                (jewelery && item.category === 'jewelery') || true
+            ) &&
+            (minPrice && item.price >= minPrice || true) &&
+            (maxPrice && item.price <= maxPrice || true)
+        )
         })
       } else {
         filteredData = data;
