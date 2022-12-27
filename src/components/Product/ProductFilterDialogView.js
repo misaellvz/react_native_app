@@ -64,21 +64,27 @@ const ProductFilterDialogView = ({ formik }) => {
           value={formik.values.jewelery}
         />
       </View>
-      <Text style={styles.price}>Minimum price: ${numberFormat(formik.values.minPrice)}</Text>
+      <Text style={styles.price}>
+        Minimum price: ${numberFormat(formik.values.minPrice)}
+      </Text>
       <Slider
         style={styles.slider}
         autoCapitalize="none"
         minimumValue={0}
         maximumValue={1000}
-        onValueChange={(value) => formik.setFieldValue('minPrice', value)}
+        value={formik.values.minPrice}
+        onSlidingComplete={(value) => formik.setFieldValue('minPrice', value)}
       />
-      <Text style={styles.price}>Maximum price: ${numberFormat(formik.values.maxPrice)}</Text>
+      <Text style={styles.price}>
+        Maximum price: ${numberFormat(formik.values.maxPrice)}
+      </Text>
       <Slider
         style={styles.slider}
         autoCapitalize="none"
         minimumValue={0}
         maximumValue={1000}
-        onValueChange={(value) => formik.setFieldValue('maxPrice', value)}
+        value={formik.values.maxPrice}
+        onSlidingComplete={(value) => formik.setFieldValue('maxPrice', value)}
       />
       <TouchableOpacity style={styles.button} onPress={formik.handleSubmit}>
         <Text style={styles.buttonTitle}>Search</Text>

@@ -21,7 +21,7 @@ const Home = () => {
   }
   return (
     <View style={styles.container}>
-      <ProductFilterDialog open={open} onClose={handleClose} />
+      <ProductFilterDialog filter={filter} open={open} onClose={handleClose} />
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.button} onPress={handleFilter}>
           <Text style={styles.buttonTitle}>Filter</Text>
