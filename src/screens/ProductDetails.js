@@ -14,9 +14,11 @@ const ProductDetails = ({ route: { params: { params } } }) => {
         }}
       />
       <Text style={styles.category}>{item.category}</Text>
-      <ScrollView tyle={styles.description}>
-        <Text style={styles.description}>{item.description}</Text>
-      </ScrollView>
+      <View style={styles.description}>
+        <ScrollView>
+          <Text>{item.description}</Text>
+        </ScrollView>
+      </View>
       <View style={styles.priceContainer}>
         <Text style={styles.price}>${item.price}</Text>
         <Text style={styles.rate}>&#9733; {item.rating.rate}</Text>

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   card: {
@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
     borderWidth: 0.3,
     flex: 1,
     borderRadius: 10,
-    height: '100%'
   },
   title: {
     color: "#393b39",
@@ -38,6 +37,7 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     fontSize: 15,
     paddingTop: 10,
+    maxHeight: 120,
     textTransform: 'capitalize',
   },
   priceContainer: {

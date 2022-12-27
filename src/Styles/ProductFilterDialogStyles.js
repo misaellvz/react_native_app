@@ -18,6 +18,12 @@ export const styles = StyleSheet.create({
     width: 125,
     fontWeight: 'bold'
   },
+  price: {
+    fontSize: 18,
+    color: '#2e527c',
+    width: '100%',
+    fontWeight: 'bold'
+  },
   textInput: {
     height: 40,
     margin: 12,
@@ -30,7 +36,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: 'grey'
+    borderColor: 'grey',
+    marginBottom: 10
+  },
+  switcher: {
+    height: 40,
   },
   slider: {
     marginBottom: 20,
