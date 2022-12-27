@@ -32,15 +32,20 @@ export default function useProductsFilterListState({
         filteredData = data.filter((item) => {
           const regex = new RegExp(title, 'gi');
           return (
-            (title && regex.test(item.title)) ||
-            (menClothes && item.category === "men's clothing") ||
-            (womenClothes && item.category === "women's clothing") ||
-            (electronics && item.category === 'electronics') ||
-            (jewelery && item.category === 'jewelery') ||
+            (title ? regex.test(item.title) : true) &&
+            (!menClothes && !womenClothes && !electronics && !jewelery
+              ? true
+              : (menClothes && item.category === "men's clothing") ||
+                (womenClothes && item.category === "women's clothing") ||
+                (electronics && item.category === 'electronics') ||
+                (jewelery && item.category === 'jewelery')) &&
             (minPrice && maxPrice
               ? item.price >= minPrice && item.price <= maxPrice
-              : (minPrice && item.price >= minPrice) ||
-                (maxPrice && item.price <= maxPrice))
+              : minPrice
+              ? item.price >= minPrice
+              : maxPrice
+              ? item.price <= maxPrice
+              : true)
           );
         });
       } else {
