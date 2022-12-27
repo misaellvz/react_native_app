@@ -8,7 +8,7 @@ const ItemMenu = ({ title, text }) => {
       <Text style={styles.itemMenuTitle}>{title}:</Text>
       <Text>{text}</Text>
     </View>
-  )
-}
+  );
+};
 
 export default ItemMenu;

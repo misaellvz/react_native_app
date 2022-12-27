@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Account from '../screens/Account';
-import Home from '../screens/Home';
 import ProductNavigator from './ProductNavigator';
 
 const Tab = createBottomTabNavigator();
@@ -18,7 +17,7 @@ const NavigationTab = () => {
           ),
           headerTitle: 'Store',
           headerTitleAlign: 'center',
-          headerStatusBarHeight: 20
+          headerStatusBarHeight: 20,
         }}
       />
       <Tab.Screen
@@ -30,7 +29,7 @@ const NavigationTab = () => {
           ),
           headerTitle: 'Account',
           headerTitleAlign: 'center',
-          headerStatusBarHeight: 20
+          headerStatusBarHeight: 20,
         }}
       />
     </Tab.Navigator>

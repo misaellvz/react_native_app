@@ -1,4 +1,4 @@
-import { API_BASE } from "../utils/constants";
+import { API_BASE } from '../utils/constants';
 
 export async function getDataFromAPI(endpoint) {
   try {

@@ -10,7 +10,8 @@ const ProductCard = ({ item }) => {
   }
   return (
     <TouchableOpacity style={styles.card} onPress={goToProductDetails}>
-      <Text style={styles.name}>{item.title}</Text>
+      <Text style={styles.name} numberOfLines={1} ellipsizeMode='tail'>{item.title}</Text>
+      <Text style={styles.name}>${item.price}</Text>
       <Image
         style={styles.image}
         source={{

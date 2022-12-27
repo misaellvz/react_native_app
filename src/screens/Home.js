@@ -16,7 +16,7 @@ const Home = () => {
     setOpen(false);
     setFilter(dialogCloseEvent);
   }
-  function handleFilter(){
+  function handleFilter() {
     setOpen(true);
   }
   return (
