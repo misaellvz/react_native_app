@@ -5468,14 +5468,14 @@ react-native-gradle-plugin@^0.70.3:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz#cbcf0619cbfbddaa9128701aa2d7b4145f9c4fc8"
   integrity sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A==
 
-react-native-paper@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-5.1.0.tgz#7a533a107bf1356241e94789976808ed93ce173d"
-  integrity sha512-cNW/k1i/bd08eSmCpWyMt5aZMrAAl/c56bG2VnPrJtVyQtBgdCvMXnpXhDOWEBJPR6ZEiAJl6VWutYvi9XcDcg==
+react-native-paper@^5.4.0:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-5.5.2.tgz#c28058ad0e4252b3b6061b9ddc39ed11543706d5"
+  integrity sha512-cgkx67++r1oDoZRhzTohb0//qkD1Z20C/OcLfrE0HzyAkG+bYm0fA6gWqvHpdC7icQmuDS8iOOLu2288IYWiOA==
   dependencies:
     "@callstack/react-theme-provider" "^3.0.8"
     color "^3.1.2"
-    use-event-callback "^0.1.0"
+    use-latest-callback "^0.1.5"
 
 react-native-reanimated@^2.13.0:
   version "2.13.0"
@@ -6635,11 +6635,6 @@ url-parse@^1.5.9:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
-
-use-event-callback@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/use-event-callback/-/use-event-callback-0.1.0.tgz#29d7ce996802935c5387e7d3b606cf316da3457f"
-  integrity sha512-5fTzY5UEXHMK5UR0NRkUz6TPfWmmX9fO8Tx3SnHrfMPdrQ7Rna0gDBy0r56SP68TwsP9DgwSBzeysCu3A/Z2NA==
 
 use-latest-callback@^0.1.5:
   version "0.1.5"
